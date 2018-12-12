@@ -19,6 +19,12 @@ const modalContent = () => {
     document.querySelector("button").focus();
 }
 
+// Audio credit: http://www.orangefreesounds.com/
+const collisionSound = new Audio('sounds/Cartoon-pop.mp3');
+const missionFailedSound = new Audio('sounds/Wha-wha-wha-sound-effect.mp3');
+const levelUpSound = new Audio('sounds/Level-up-sound-effect.mp3');
+const celebrationSound = new Audio('sounds/Winning-sound-effect.mp3');
+
 // Images of enemies
 // photo credit: https://pngimage.net/wp-content/uploads/2018/05/dibujo-carro-png-1.png
 // photo credit: https://i.pinimg.com/originals/d1/21/3c/d1213cadf5810239095d0ea5dbec26fd.png
@@ -78,9 +84,9 @@ class Enemy {
             player.y < this.y + 60 &&
             player.y + 60 > this.y) {
                 allLives.shift();
-                    (allLives.length > 0) ? player.reset()
+                    (allLives.length > 0) ? collisionSound.play() && player.reset()
                 :
-                    this.gameOver();
+                    missionFailedSound.play() && this.gameOver();
         }
     }
 
@@ -129,9 +135,9 @@ class Player {
     levelUp() {
         levelGame++;
         setTimeout(() => {
-                (levelGame < 3) ? player.reset()
+                (levelGame < 3) ? levelUpSound.play() && player.reset()
             :
-                this.gameWon();
+                celebrationSound.play() && this.gameWon();
         }, 300);
     }
 
