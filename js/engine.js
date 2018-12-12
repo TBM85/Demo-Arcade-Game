@@ -16,7 +16,7 @@
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
-     * set the canvas element's height/width and add it to the DOM.
+     * set the canvas elements height/width and add it to the DOM.
      */
     var doc = global.document,
         win = global.window,
@@ -108,18 +108,18 @@ var Engine = (function(global) {
          */
         var rowImages = [
                 'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/stone-block.png',   // Row 1 of 4 of stone
+                'images/stone-block.png',   // Row 2 of 4 of stone
+                'images/stone-block.png',   // Row 3 of 4 of stone
+                'images/stone-block.png',   // Row 4 of 4 of grass
+                'images/grass-block.png'    // Row 1 of 1 of grass
             ],
             numRows = 6,
             numCols = 5,
             row, col;
 
         // Before drawing, clear existing canvas
-        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.clearRect(0,0,canvas.width,canvas.height)
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
@@ -154,6 +154,10 @@ var Engine = (function(global) {
         });
 
         player.render();
+
+        allLives.forEach(function(lives) {
+            lives.render();
+        });
     }
 
     /* This function does nothing but it could have been a good place to
@@ -172,8 +176,18 @@ var Engine = (function(global) {
         'images/stone-block.png',
         'images/water-block.png',
         'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png'
+        // photo credit: https://pngimage.net/wp-content/uploads/2018/05/dibujo-carro-png-1.png
+        'images/enemy-car-one.png',
+        // photo credit: https://i.pinimg.com/originals/d1/21/3c/d1213cadf5810239095d0ea5dbec26fd.png
+        'images/enemy-car-two.png',
+        // photo credit: https://i.pinimg.com/originals/b7/03/0a/b7030a39c05528272176a5d91ace55a0.png
+        'images/enemy-car-three.png',
+        // photo credit: https://i.pinimg.com/originals/72/bc/e7/72bce77fc8cbb5dae1f9f410dcf97589.png
+        'images/enemy-car-four.png',
+        // photo credit: http://images.vectorhq.com/images/previews/c46/red-crab-98275.png
+        'images/crab-player.png',
+        'images/loser-crab.png',
+        'images/Heart.png'
     ]);
     Resources.onReady(init);
 

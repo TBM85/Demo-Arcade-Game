@@ -1,3 +1,58 @@
 body {
     text-align: center;
 }
+
+/* MODAL */
+.modal-game {
+    background: url('../images/stone.jpg');
+    background-color: #d2d2c8;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 1em;
+    width: 31.6em;
+    height: 36.5em;
+    margin: 0 auto;
+    border-radius: 0.35em;
+}
+
+.modal-game img {
+    width: 10em;
+    padding-top: 15%;
+}
+
+.modal-game h2 {
+    padding-top: 0.2em;
+}
+
+.modal-game h2,
+.modal-game p {
+    color: #303133;
+    text-shadow: -2px -2px 1px #f5f5f0,
+                2px 2px 1px #f5f5f0,
+                -2px 2px 1px #f5f5f0,
+                2px -2px 1px #f5f5f0;
+    font-size: 2.5em;
+}
+
+.modal-game button {
+    background-color: #242f5f;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border-radius: 0.25em;
+    border-style: none;
+    color: #fff;
+    padding: 0.8em;
+    margin-top: 1.8em;
+    box-shadow: 4px 3px 10px 0 rgba(83, 93, 99, 1);
+    cursor: pointer;
+}
+
+.modal-game button:active,
+.modal-game button:focus {
+    border-style: none;
+    outline: none;
+    box-shadow: 1px 1px 8px 0 rgba(83, 93, 99, 1);
+}
