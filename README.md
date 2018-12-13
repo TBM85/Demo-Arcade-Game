@@ -1,20 +1,27 @@
-# Classic Arcade Game Clone Project
+# Arcade Game
 
-## Table of Contents
+## Description
+This game tries to recreate the classic arcade game Frogger. It is built on visual art assets and a game engine provided by Udacity to carry out this third project. HTML, CSS and Object-Oriented JavaScript are used
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+![Arcade Game](images/Project_Arcade_Game.jpg)
+
+## Resources
+* [Udacity Template](https://github.com/udacity/frontend-nanodegree-arcade-game)
+* [Kavoon Font](https://fonts.googleapis.com/css?family=Kavoon)
+* [Sounds](http://www.orangefreesounds.com)
+
+## Objective
+The player needs to move across the stone road and reach the water avoiding to collide with the enemies
 
 ## Instructions
+* The game has three levels
+* The player has three lives
+* The player can move with the arrow keys: left, right, up and down
+* If the player touches the water, one level increases
+* If the player collides with an enemy, the player loses a life and returns to the starting position
+* If the player loses all lives, he loses the game
+* If the player reaches level three, he wins the game
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
-
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
-
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## How to run the game
+1. Clone the repository or download the zip file
+2. Open the "index.html" file in your browser to see the game
