@@ -1,4 +1,5 @@
 # Arcade Game
+[Demo](https://tbm85.github.io/Demo-Arcade-Game/)
 
 ## Description
 This game tries to recreate the classic arcade game Frogger. It is built on visual art assets and a game engine provided by Udacity to carry out this third project. HTML, CSS and Object-Oriented JavaScript are used
