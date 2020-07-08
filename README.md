@@ -28,4 +28,4 @@ The player needs to move across the stone road and reach the water avoiding to c
 2. Open the "index.html" file in your browser to see the game
 
 ## License
-Copyright (c) 2018 Tania Ballester Marsal. This project is using [MIT License](LICENSE.md)
+Copyright (c) 2018 Tania Ballester. This project is using [MIT License](LICENSE.md)
